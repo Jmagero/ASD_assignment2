@@ -39,10 +39,4 @@ public class Employee {
         this.yearlySalary = yearlySalary;
         this.pensionPlan = pensionPlan;
     }
-
-    public  boolean isEligible(){
-        int year = this.getEmploymentDate().getYear() - LocalDate.now().getYear();
-        int dayOfMonth = this.getEmploymentDate().getDayOfMonth();
-        return year > 5 || dayOfMonth < 5 || dayOfMonth > 25;
-    }
 }
